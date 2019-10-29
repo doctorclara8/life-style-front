@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap');
+@font-face {
+    font-family: 'Notera';
+    src: url('../font/notera_personaluseonly.ttf');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Raleway';
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+body {
+    font-size: 1.2rem;
+    background: rgb(247, 247, 247);
+}
+
+svg:hover {
+    fill: rgb(255, 183, 155);
+}
+
+a:focus,
+a:hover,
+.about p,
+.pink-text,
+.pagination div:hover {
+    color: rgb(255, 183, 155);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.border-pink,
+.pagination div {
+    border-bottom: solid 2px rgb(255, 183, 155);
+}
+
+.border-bottom {
+    border-bottom: solid 1px rgba(68, 68, 68, 0.15);
+}
+
+.border-top {
+    border-top: solid 1px rgba(68, 68, 68, 0.15);
+}
+
+.pagination {
+    font-size: 1rem;
+}
+
+.navbar {
+    background: white !important;
+    box-shadow: 0 2px 3px rgba(68, 68, 68, 0.25);
+}
+
+.navbar-nav.custom li {
+    border-left: 1px solid rgba(68, 68, 68, 0.25);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav.custom li:last-child {
+    border-right: 1px solid rgba(68, 68, 68, 0.25);
+}
+
+.about h1 {
+    font-family: 'Notera';
+    font-size: 8rem;
+}
+
+.about p:before,
+.about p:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 8%;
+    height: 1px;
+    background-color: black;
+    position: relative;
+}
+
+.about p:before {
+    left: -1%;
+}
+
+.about p:after {
+    right: -1%;
+}
+
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    background: rgb(32, 32, 32);
+    width: 100px;
+    opacity: 100%;
+}
+
+.animated-icon {
+    width: 30px;
+    height: 35px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in;
+    cursor: pointer;
+}
+
+.animated-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .20s ease-in;
+}
+
+.animated-icon span {
+    background: #212121;
+}
+
+.animated-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.animated-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.animated-icon span:nth-child(3) {
+    top: 20px;
+}
+
+.animated-icon.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.animated-icon.open span:nth-child(2) {
+    opacity: 0;
+    transition: .1s ease-in;
+}
+
+.animated-icon.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+table td:last-child {
+    background: rgb(255, 183, 155);
+}
+
+.btn-custom {
+    color: #FFF;
+    font-size: 1.2rem;
+    background: rgb(255, 183, 155);
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-item {
+        font-size: 2rem;
+    }
+    .navbar-nav.social {
+        padding: .5rem;
+        border-top: solid 2px #212121;
+    }
+    .navbar-nav.custom {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+    .navbar-nav.custom li,
+    .navbar-nav.custom li:last-child {
+        border: none;
+        height: auto;
+    }
+}

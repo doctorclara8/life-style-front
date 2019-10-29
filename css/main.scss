@@ -1,0 +1,211 @@
+$pink: rgb(255, 183, 155);
+$white: rgb(247, 247, 247);
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap');
+@font-face {
+    font-family: 'Notera';
+    src: url('../font/notera_personaluseonly.ttf');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Raleway';
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+body {
+    font-size: 1.2rem;
+    background: $white;
+}
+
+.white-background {
+    background: #fff;
+}
+
+.img-sm {
+    width: 70px;
+    height: 50px;
+}
+
+svg {
+    &:hover {
+        fill: $pink;
+    }
+}
+
+@media (max-width: 767px) {
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+a {
+    &:hover {
+        color: $pink;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    color: #000;
+}
+
+.pagination div:hover {
+    @extend a;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.pink-text {
+    color: $pink;
+}
+
+.border {
+    &-pink {
+        border-bottom: solid 2px $pink;
+    }
+    &-bottom {
+        border-bottom: solid 1px rgba(68, 68, 68, 0.15);
+    }
+    &-top {
+        border-top: solid 1px rgba(68, 68, 68, 0.15);
+    }
+}
+
+table td:last-child {
+    background: rgb(255, 183, 155);
+}
+
+.btn-custom {
+    color: #FFF;
+    font-size: 1.2rem;
+    background: rgb(255, 183, 155);
+}
+
+.none-border {
+    border: none;
+    outline: none;
+}
+
+.navbar {
+    background: white !important;
+    box-shadow: 0 2px 3px rgba(68, 68, 68, 0.25);
+    &-nav {
+        &.custom li {
+            border-left: 1px solid rgba(68, 68, 68, 0.25);
+            display: flex;
+            align-items: center;
+            &:last-child {
+                border-right: 1px solid rgba(68, 68, 68, 0.25);
+            }
+        }
+    }
+    &-toggler:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        &.custom {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-item {
+            font-size: 2rem;
+        }
+        &.social {
+            padding: .5rem;
+            border-top: solid 2px #212121;
+        }
+        &.custom li {
+            border: none;
+            height: auto;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+.animated-icon {
+    width: 30px;
+    height: 35px;
+    position: relative;
+    margin: 0px;
+    transform: rotate(0deg);
+    transition: .5s ease-in;
+    cursor: pointer;
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 9px;
+        opacity: 1;
+        // transform: rotate(0deg);
+        transition: .20s ease-in;
+        background: #212121;
+        @for $i from 0 through 2 {
+            &:nth-child(#{$i}) {
+                top: 10px*$i;
+            }
+        }
+    }
+    &.open {
+        span {
+            &:nth-child(1) {
+                top: 11px;
+                transform: rotate(135deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                transition: .1s ease-in;
+            }
+            &:nth-child(3) {
+                top: 11px;
+                transform: rotate(-135deg);
+            }
+        }
+    }
+}
+
+.about {
+    h1 {
+        font-family: 'Notera';
+        font-size: 8rem;
+    }
+    p {
+        &:before,
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 8%;
+            height: 1px;
+            background-color: black;
+            position: relative;
+        }
+        &:before {
+            left: -1%;
+        }
+        &:after {
+            right: -1%;
+        }
+    }
+}
+
+.card,
+.border-shadow {
+    border: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
