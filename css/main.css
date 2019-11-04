@@ -156,6 +156,99 @@ table td:hover svg {
 }
 
 @media (max-width: 767px) {
+  .navbar-collapse li {
+    letter-spacing: 1.2px;
+    opacity: 0;
+  }
+  .navbar-collapse li:nth-child(1) {
+    -webkit-animation: menu 1.7s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 1.7s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse li:nth-child(2) {
+    -webkit-animation: menu 1.9s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 1.9s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse li:nth-child(3) {
+    -webkit-animation: menu 2.1s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 2.1s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse li:nth-child(4) {
+    -webkit-animation: menu 2.3s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 2.3s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse li:nth-child(5) {
+    -webkit-animation: menu 2.5s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 2.5s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse li:nth-child(6) {
+    -webkit-animation: menu 2.7s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 2.7s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse li:nth-child(7) {
+    -webkit-animation: menu 2.9s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 2.9s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 10s;
+    transition: 10s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .navbar-collapse {
+    height: auto;
+  }
+  .social {
+    opacity: 0;
+    -webkit-animation: menu 3.3s cubic-bezier(0, 0, 0, 1) 1;
+            animation: menu 3.3s cubic-bezier(0, 0, 0, 1) 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@-webkit-keyframes menu {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menu {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
   .fixed {
     position: fixed;
     top: 0;
@@ -202,7 +295,7 @@ table td:hover svg {
 
 .animated-icon {
   width: 30px;
-  height: 35px;
+  height: 30px;
   position: relative;
   margin: 0px;
   -webkit-transform: rotate(0deg);
@@ -219,6 +312,8 @@ table td:hover svg {
   width: 100%;
   border-radius: 9px;
   opacity: 1;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   background: #212121;
@@ -252,6 +347,26 @@ table td:hover svg {
   top: 11px;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+
+.autorization button {
+  background: none;
+  border: none;
+}
+
+.autorization button:focus {
+  font-weight: bold;
+  outline: none;
+}
+
+.autorization button:hover {
+  outline: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.modal-body {
+  background: #f7f7f7;
 }
 
 .about h1 {
@@ -322,6 +437,36 @@ table td:hover svg {
 
 .slide-next {
   right: 0;
+}
+
+.slider-slick {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: show 3s 1;
+          animation: show 3s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .social-bar svg {

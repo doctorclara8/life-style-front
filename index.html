@@ -30,7 +30,15 @@
                         </svg>
                     </a>
                 </li>
-                <li class="nav-item py-md-3 px-md-3 px-5"><a class="nav-link" href="#">SUBMIT STORY</a></li>
+                <li class="nav-item py-md-3 px-md-3 px-5"><a class="nav-link" data-toggle="modal"
+                        data-target="#submitstory" href="#">SUBMIT STORY</a></li>
+                        <div class="autorization navbar-nav ">
+                                <form class="form-inline ml-0  ml-lg-2">
+                                    <button type="button" class=" mx-0 mx-lg-3 " data-toggle="modal" data-target="#signin">
+                                        SIGN IN
+                                    </button>
+                                </form>
+                            </div>
             </ul>
             <button class="navbar-toggler custom-toggler " type="button" data-toggle="collapse"
                 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -112,6 +120,7 @@
                             </svg></a>
                     </li>
                 </ul>
+                
             </div>
         </nav>
     </header>
@@ -123,7 +132,7 @@
         </div>
     </div>
     <!-- start of slider -->
-    <div class="container-fluid mt-md-5 ">
+    <div class="container-fluid mt-md-5 slider-slick">
         <div class="slider mx-auto">
             <div class="">
                 <img src="images/1.jpg" class="d-block w-100 h-100" alt="...">
@@ -1191,6 +1200,129 @@ c0.275,0,0.5-0.225,0.5-0.5V51.525h12.168c0.276,0,0.5-0.223,0.5-0.5v-5.302C95.482
             </div>
 
     </footer>
+    <!-- авторизація -->
+
+    <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">SIGN IN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">YOUR EMAIL</label>
+                            <input
+                                class="white-background border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                type="email" placeholder="YOUR EMAIL ADDRESS">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordin">PASSWORD</label>
+                            <input type="password"
+                                class=" white-background border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                id="passwordin" placeholder="PASSWORD">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="checkin">
+                            <label class="form-check-label ml-2" for="checkin">SAVE</label>
+                        </div>
+                        <h5> DOESNT SIGN IN?</h5>
+                        <button type="button" class=" mx-0 mx-lg-3" data-toggle="modal" data-target="#signup">
+                            SIGN UP
+                        </button>
+                        <button type="submit" class="btn btn-custom btn-block py-3 mt-3">SIGN IN</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">SIGN UP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">YOUR EMAIL</label>
+                            <input type="emailup"
+                                class=" white-background border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                id="emailup" aria-describedby="emailHelp" placeholder="YOUR EMAIL ADDRESS">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordup">PASSWORD</label>
+                            <input type="password"
+                                class=" white-background border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                id="password" placeholder="PASSWORD">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="checkup">
+                            <label class="form-check-label ml-2" for="checkup">SAVE</label>
+                        </div>
+                        <button type="submit" class="btn  btn-custom btn-block py-3 mt-3">SIGN UP</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="submitstory" tabindex="-1" role="dialog" aria-labelledby="submitstory"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">SUBMIT STORY</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input
+                                class="white-background border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                type="text" placeholder="NAME OF YOUR STORY">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordin">STORY</label>
+                            <textarea
+                                class="white-background border-shadow border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                rows="7" placeholder="TYPE YOUR STORY HERE"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="tags">
+                            <label class="form-check-label ml-2" for="tags">ADD TAGS</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                class="white-background border-shadow border-shadow none-border p-md-4 p-3 my-md-3 my-1 d-block w-100"
+                                rows="7" placeholder="PLEASE ADD TAGS BY COMMAS"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file" class="ml-sm-2 ml-0">COVER</label>
+
+                            <label class="btn btn-custom w-50" for="my-file-selector">
+                                <input id="my-file-selector" type="file" class="d-none w-25 ">
+                                SELECT FILE
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-block py-3 mt-3">SUBMIT</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
         crossorigin="anonymous "></script>

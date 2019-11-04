@@ -111,7 +111,6 @@ table {
     vertical-align: top;
   }
   width: min-content !important;
-
 }
 
 .btn-custom {
@@ -159,7 +158,37 @@ table td:hover {
     outline: none;
   }
 }
+@media (max-width: 767px) {
+  .navbar-collapse li {
+    letter-spacing: 1.2px;
+    opacity: 0;
+    @for $i from 1 through 7 {
+      &:nth-child(#{$i}) {
+        animation: menu ($i * 0.2+1.5) + s cubic-bezier(0, 0, 0, 1) 1;
+        transition: 10s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  .navbar-collapse {
+    height: auto;
+  }
+  .social {
+    opacity: 0;
+    animation: menu 3.3s cubic-bezier(0, 0, 0, 1) 1;
+    transition: 1s;
+    animation-fill-mode: forwards;
+  }
+}
 
+@keyframes menu {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 767px) {
   .fixed {
     position: fixed;
@@ -201,7 +230,7 @@ table td:hover {
 }
 .animated-icon {
   width: 30px;
-  height: 35px;
+  height: 30px;
   position: relative;
   margin: 0px;
   transform: rotate(0deg);
@@ -214,7 +243,7 @@ table td:hover {
     width: 100%;
     border-radius: 9px;
     opacity: 1;
-    // transform: rotate(0deg);
+    transform: rotate(0deg);
     transition: 0.2s ease-in;
     background: #212121;
     @for $i from 0 through 2 {
@@ -240,7 +269,25 @@ table td:hover {
     }
   }
 }
+.autorization button {
+  background: none;
+  border: none;
+  &:focus{
+    font-weight: bold;
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+    transform: scale(1.2);
+  }
+  
+}
 
+.modal-body
+{
+  background: $white;
+
+}
 .about {
   h1 {
     font-family: "Notera";
@@ -312,7 +359,22 @@ table td:hover {
     right: 0;
   }
 }
+.slider-slick {
+  opacity: 0;
+  transition: 1s;
+  animation: show 3s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
 
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 //detail page
 .social-bar {
   svg {
