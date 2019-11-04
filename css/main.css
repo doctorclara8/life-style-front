@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap");
 @font-face {
-  font-family: 'Notera';
+  font-family: "Notera";
   src: url("../font/notera_personaluseonly.ttf");
   font-weight: normal;
 }
@@ -11,24 +11,24 @@
 }
 
 html {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   color: #000;
   font-size: 10px;
+  cursor: auto;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
   font-weight: bold;
 }
 
 body {
+  font-family: "Raleway";
   font-size: 1.2rem;
   background: #f7f7f7;
 }
 
 .white-background {
   background: #fff;
-}
-
-.img-sm {
-  width: 70px;
-  height: 50px;
 }
 
 svg:hover {
@@ -64,6 +64,14 @@ a:hover, .pagination div:hover {
   border-bottom: solid 2px #ffb79b;
 }
 
+.border-pink-bottom {
+  border-top: solid 2px #ffb79b;
+}
+
+.border-pink-left {
+  border-left: solid 4px #ffb79b;
+}
+
 .border-bottom {
   border-bottom: solid 1px rgba(68, 68, 68, 0.15);
 }
@@ -72,14 +80,49 @@ a:hover, .pagination div:hover {
   border-top: solid 1px rgba(68, 68, 68, 0.15);
 }
 
+.border-right {
+  border-right: solid 1px rgba(68, 68, 68, 0.15);
+}
+
+table {
+  width: -webkit-min-content !important;
+  width: -moz-min-content !important;
+  width: min-content !important;
+}
+
+table td {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
 table td:last-child {
   background: #ffb79b;
 }
 
+table td:last-child:hover svg {
+  fill: #fff;
+  cursor: pointer;
+}
+
 .btn-custom {
-  color: #FFF;
+  color: #fff;
   font-size: 1.2rem;
   background: #ffb79b;
+}
+
+.btn-custom:hover {
+  outline: none;
+  color: #fff;
+  -webkit-transform: scale(1.01, 1);
+          transform: scale(1.01, 1);
+}
+
+table td:hover {
+  cursor: pointer;
+}
+
+table td:hover svg {
+  fill: #ffb79b;
 }
 
 .none-border {
@@ -113,6 +156,16 @@ table td:last-child {
 }
 
 @media (max-width: 767px) {
+  .fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+@media (max-width: 767px) {
   .navbar-nav.custom {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -129,7 +182,7 @@ table td:last-child {
     font-size: 2rem;
   }
   .navbar-nav.social {
-    padding: .5rem;
+    padding: 0.5rem;
     border-top: solid 2px #212121;
   }
   .navbar-nav.custom li {
@@ -141,6 +194,12 @@ table td:last-child {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1064px) {
+  .social {
+    display: none;
+  }
+}
+
 .animated-icon {
   width: 30px;
   height: 35px;
@@ -148,8 +207,8 @@ table td:last-child {
   margin: 0px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .5s ease-in;
-  transition: .5s ease-in;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
   cursor: pointer;
 }
 
@@ -160,8 +219,8 @@ table td:last-child {
   width: 100%;
   border-radius: 9px;
   opacity: 1;
-  -webkit-transition: .20s ease-in;
-  transition: .20s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
   background: #212121;
 }
 
@@ -185,8 +244,8 @@ table td:last-child {
 
 .animated-icon.open span:nth-child(2) {
   opacity: 0;
-  -webkit-transition: .1s ease-in;
-  transition: .1s ease-in;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
 }
 
 .animated-icon.open span:nth-child(3) {
@@ -196,7 +255,7 @@ table td:last-child {
 }
 
 .about h1 {
-  font-family: 'Notera';
+  font-family: "Notera";
   font-size: 8rem;
 }
 
@@ -221,8 +280,8 @@ table td:last-child {
 .card,
 .border-shadow {
   border: none;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .list-none {
@@ -257,15 +316,35 @@ table td:last-child {
   fill: #ffb79b;
 }
 
-.slide-prev svg:hover, .slide-prev svg:focus, .slide-next svg:hover, .slide-next svg:focus {
-  fill: #fff;
-}
-
 .slide-prev {
   left: 0;
 }
 
 .slide-next {
   right: 0;
+}
+
+.social-bar svg {
+  fill: #ffb79b;
+}
+
+.social-bar .white-background {
+  cursor: pointer;
+}
+
+.social-bar .white-background:hover {
+  background: #424242;
+}
+
+.social-bar .white-background:hover a, .social-bar .white-background:hover .pagination div:hover, .pagination .social-bar .white-background:hover div:hover {
+  color: #fff;
+}
+
+.contact-information svg {
+  fill: #ffb79b;
+}
+
+.contact-information span {
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
